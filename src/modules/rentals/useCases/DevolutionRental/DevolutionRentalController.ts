@@ -10,12 +10,12 @@ class DevolutionRentalController {
     const { id: user_id } = request.user;
     const { id } = request.params;
 
-    const rental = devolutionRentalUseCase.execute({
+    const rental = await devolutionRentalUseCase.execute({
       id,
       user_id,
     });
 
-    return response.status(201).json(rental);
+    return response.status(200).json(rental);
   }
 }
 

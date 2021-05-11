@@ -62,8 +62,6 @@ class DevolutionRentalUseCase {
 
     await this.carsRepository.updateAvailability(car.id, true);
 
-    console.log(rental);
-
     return rental;
   }
 }
